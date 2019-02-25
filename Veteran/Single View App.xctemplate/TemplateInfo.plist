@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.lema.dt.unit.manual.singleViewApplication</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.cocoaTouchApplicationBase</string>
+		<string>com.apple.dt.unit.coreDataCocoaTouchApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that doesn&apos;t use storyboards and uses InjectionIII</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>rootClassName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Root View Controller Class:</string>
+			<key>Description</key>
+			<string>Class name of root view controller</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>RootViewController</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Swift</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+						<string>___VARIABLE_rootClassName___.swift:comments</string>
+						<string>___VARIABLE_rootClassName___.swift:imports:importCocoa</string>
+						<string>___VARIABLE_rootClassName___.swift:implementation(___FILEBASENAME___: UIViewController)</string>
+						<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+						<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:super</string>
+						<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</string>
+						<string>Extensions.swift</string>
+						<string>Injection.swift</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</key>
+						<string>view.backgroundColor = .white</string>
+						<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+						<string>// Override point for customization after application launch.
+window = UIWindow(frame: UIScreen.main.bounds)
+window?.rootViewController = ___VARIABLE_rootClassName___()
+window?.makeKeyAndVisible()
+
+#if DEBUG
+Bundle(path: &quot;/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle&quot;)?.load()
+#endif</string>
+						<key>Extensions.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>Extensions.swift</string>
+						</dict>
+						<key>Injection.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>Injection.swift</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>Objective-C</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>AppDelegate.m:imports:importHeader:___VARIABLE_rootClassName___.h</string>
+						<string>___VARIABLE_rootClassName___.h:comments</string>
+						<string>___VARIABLE_rootClassName___.h:imports:importCocoa</string>
+						<string>___VARIABLE_rootClassName___.h:interface(___FILEBASENAME___ : UIViewController)</string>
+						<string>___VARIABLE_rootClassName___.m:comments</string>
+						<string>___VARIABLE_rootClassName___.m:imports:importHeader:___VARIABLE_rootClassName___.h</string>
+						<string>___VARIABLE_rootClassName___.m:extension</string>
+						<string>___VARIABLE_rootClassName___.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)</string>
+						<string>___VARIABLE_rootClassName___.m:implementation:methods:viewDidLoad:super</string>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>Definitions</key>
+	<dict/>
+</dict>
+</plist>
