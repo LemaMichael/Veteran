@@ -1,41 +1,36 @@
 # Veteran
-A Custom Xcode Template that embeds [InjectionIII](https://github.com/johnno1962/InjectionIII) and removes **Main.storyboard**. This is for developers that use Hot Reloading for the iOS simulator and programmatically create constraints. 
+A Custom Xcode Template that supports [InjectionIII](https://github.com/johnno1962/InjectionIII) and [Sherlock](https://sherlock.inspiredcode.io). This template is for developers that use Hot Reloading for the iOS simulator and do not use **Main.storyboard**. 
+
+
 
 Added Files: 
 
-`Extensions.swift` - An extension for UIView to help activate constraints. 
+`Extensions.swift` - An extension for UIView to help activate constraints  (Optional)
 
-`Injection.swift` - For Hot Reloading
+`SwiftInjection.swift` - For Hot Reloading (Only for InjectionIII)
+
 
  # Preview
 <p align="center">
-  <img src = "/Demo/Demo1.png" height = "300"> 
-  <img src = "/Demo/Demo2.png" height = "300"> 
+  <img src = "/Demo/Demo1.png" height = "350"> 
+</p>
+
+## InjectionIII
+
+<p align="center">
+  <img src = "/Demo/InjectionTest.gif" height = "500"> 
 </p>
 
 
-Modified Files:
+## Sherlock
 
-`AppDelegate.swift`
-
-```objc
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = HomeViewController()
-        window?.makeKeyAndVisible()
-
-        #if DEBUG
-        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
-        #endif
-        return true
-    }
-
-```
+<p align="center">
+  <img src = "/Demo/SherlockTest.gif" height = "500"> 
+</p>
 
 
 ## Get Started
-Drag the Veteran folder to `~/Library/Developer/Xcode/Templates`
+Drag the Veteran folder to `~/Library/Developer/Xcode/Templates/Project Templates`
 
 ## Credit
 Helmet by Veysel Kara from the Noun Project
