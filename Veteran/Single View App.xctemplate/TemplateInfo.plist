@@ -14,7 +14,7 @@
 	<key>Concrete</key>
 	<true/>
 	<key>Description</key>
-	<string>This template provides a starting point for an application that doesn&apos;t use storyboards and uses InjectionIII</string>
+	<string>This template provides a starting point for a veteran project.</string>
 	<key>SortOrder</key>
 	<integer>1</integer>
 	<key>Options</key>
@@ -35,29 +35,47 @@
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>languageChoice</string>
+			<string>liveReload</string>
+			<key>Name</key>
+			<string>Live Reload:</string>
+			<key>Description</key>
+			<string>The type of hot reloading the user needs</string>
+			<key>Values</key>
+			<array>
+				<string>InjectionIII</string>
+				<string>Sherlock</string>
+			</array>
+			<key>Default</key>
+			<string>Sherlock</string>
+			<key>Type</key>
+			<string>popup</string>
 			<key>Units</key>
 			<dict>
-				<key>Swift</key>
-				<dict>
-					<key>Nodes</key>
-					<array>
-						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
-						<string>___VARIABLE_rootClassName___.swift:comments</string>
-						<string>___VARIABLE_rootClassName___.swift:imports:importCocoa</string>
-						<string>___VARIABLE_rootClassName___.swift:implementation(___FILEBASENAME___: UIViewController)</string>
-						<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
-						<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:super</string>
-						<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</string>
-						<string>Extensions.swift</string>
-						<string>Injection.swift</string>
-					</array>
-					<key>Definitions</key>
+				<key>InjectionIII</key>
+				<array>
 					<dict>
-						<key>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</key>
-						<string>view.backgroundColor = .white</string>
-						<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
-						<string>// Override point for customization after application launch.
+						<key>RequiredOptions</key>
+						<dict>
+							<key>languageChoice</key>
+							<string>Swift</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+							<string>___VARIABLE_rootClassName___.swift:comments</string>
+							<string>___VARIABLE_rootClassName___.swift:imports:importCocoa</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation(___FILEBASENAME___: UIViewController)</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:super</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</string>
+							<string>SwiftInjection.swift</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</key>
+							<string>view.backgroundColor = .white</string>
+							<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+							<string>// Override point for customization after application launch.
 window = UIWindow(frame: UIScreen.main.bounds)
 window?.rootViewController = ___VARIABLE_rootClassName___()
 window?.makeKeyAndVisible()
@@ -65,33 +83,83 @@ window?.makeKeyAndVisible()
 #if DEBUG
 Bundle(path: &quot;/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle&quot;)?.load()
 #endif</string>
-						<key>Extensions.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>Extensions.swift</string>
-						</dict>
-						<key>Injection.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>Injection.swift</string>
+							<key>SwiftInjection.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>SwiftInjection.swift</string>
+							</dict>
 						</dict>
 					</dict>
-				</dict>
-				<key>Objective-C</key>
-				<dict>
-					<key>Nodes</key>
-					<array>
-						<string>AppDelegate.m:imports:importHeader:___VARIABLE_rootClassName___.h</string>
-						<string>___VARIABLE_rootClassName___.h:comments</string>
-						<string>___VARIABLE_rootClassName___.h:imports:importCocoa</string>
-						<string>___VARIABLE_rootClassName___.h:interface(___FILEBASENAME___ : UIViewController)</string>
-						<string>___VARIABLE_rootClassName___.m:comments</string>
-						<string>___VARIABLE_rootClassName___.m:imports:importHeader:___VARIABLE_rootClassName___.h</string>
-						<string>___VARIABLE_rootClassName___.m:extension</string>
-						<string>___VARIABLE_rootClassName___.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)</string>
-						<string>___VARIABLE_rootClassName___.m:implementation:methods:viewDidLoad:super</string>
-					</array>
-				</dict>
+				</array>
+				<key>Sherlock</key>
+				<array>
+					<dict>
+						<key>RequiredOptions</key>
+						<dict>
+							<key>languageChoice</key>
+							<string>Swift</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+							<string>___VARIABLE_rootClassName___.swift:comments</string>
+							<string>___VARIABLE_rootClassName___.swift:imports:importCocoa</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation(___FILEBASENAME___: UIViewController)</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:super</string>
+							<string>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>___VARIABLE_rootClassName___.swift:implementation:methods:viewDidLoad:body</key>
+							<string>view.backgroundColor = .white</string>
+							<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+							<string>// Override point for customization after application launch.
+window = UIWindow(frame: UIScreen.main.bounds)
+window?.rootViewController = ___VARIABLE_rootClassName___()
+window?.makeKeyAndVisible()</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>extensions</string>
+			<key>Name</key>
+			<string>Include Extensions</string>
+			<key>Description</key>
+			<string>Extensions that are configurable </string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>true</string>
+			<key>Units</key>
+			<dict>
+				<key>false</key>
+				<array/>
+				<key>true</key>
+				<array>
+					<dict>
+						<key>RequiredOptions</key>
+						<dict>
+							<key>languageChoice</key>
+							<string>Swift</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>Extensions.swift</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>Extensions.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>Extensions.swift</string>
+							</dict>
+						</dict>
+					</dict>
+				</array>
 			</dict>
 		</dict>
 	</array>
