@@ -1,5 +1,18 @@
 # Veteran
-A Custom Xcode Template that supports [InjectionIII](https://github.com/johnno1962/InjectionIII) and [Sherlock](https://sherlock.inspiredcode.io). This template is for developers that use Hot Reloading for the iOS simulator and do not use **Main.storyboard**. 
+A Custom Xcode Template that supports [InjectionIII](https://github.com/johnno1962/InjectionIII) and [Sherlock](https://sherlock.inspiredcode.io). 
+
+
+This template is for developers that:
+- Use Hot Reloading for the iOS simulator 
+- Don't use **Main.storyboard**
+- Use the same extensions over various projects
+- Forget to implement `@objc func injected()` and the following code for InjectionIII
+
+```Objective-C
+#if DEBUG
+Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
+#endif
+```
 
 
 
@@ -7,7 +20,7 @@ Added Files:
 
 `Extensions.swift` - An extension for UIView to help activate constraints  (Optional)
 
-`SwiftInjection.swift` - For Hot Reloading (Only for InjectionIII)
+`SwiftInjection.swift` - Used for InjectionIII
 
 
  # Preview
